@@ -1,0 +1,13 @@
+<div class="large-padding">
+    <h3>Editor de Usuario</h3>
+    <input type="text" [(ngModel)]="list.title" placeholder="Nombre usuario" class="form-control">
+
+    <div class="top space">
+        <button type="button" class="btn green" (click)="save()">
+            <i class="fa fa-user-plus"></i>  Guardar
+        </button>
+        <button type="button" class="btn green" (click)="delete()">
+                <i class="fa fa-user-times"></i>  Eliminar
+            </button>
+    </div>
+</div>

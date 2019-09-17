@@ -1,0 +1,38 @@
+
+<nav class="main-nav relative" *ngIf="afAuth.authState | async">
+    <a href="/"><img  src="http://dobleclic.mx/wp-content/uploads/2019/01/white-clic.png" alt=""></a>
+    <a href="/"><span class="nav-title iconos float-right fa fa-pencil"></span></a>
+    
+    <div class="notification-window card small-padding" *ngIf="showPanel">
+        <div *ngIf="!!(token | async); else activate">
+            <p>¿Quieres desactivar las notificaciones?</p>
+            <button type="menu" name="button" (click)="cancelPermission()">Desactivar</button>
+        </div>
+
+        <ng-template #activate>
+                <p>¿Quieres activar las notificaciones?</p>
+                <button type="menu" name="button" (click)="requestPushPermission()">Activar</button>
+        </ng-template>
+    </div>
+    
+    <a (click)="toggleNotificationsWindow()">
+        <span class="nav-title iconos float-right fa " [ngClass]="{'fa-bell orange-text' : !!(token | async), 'fa-bell-o': !(token | async)}"></span></a>
+
+    <a routerLink="#" (click)="logout()">
+       
+    <span class="nav-title iconos float-right fa fa-user-circle"></span>
+    </a>
+
+   
+    
+</nav>
+<!--p [@myAwesomeAnimation]='state' (click)="animateMe()">holo</p-->
+
+
+  <router-outlet></router-outlet>
+
+  <div class="push-message">
+      {{ (pushS.notification | async)?.notification.body }}
+  </div>
+
+  

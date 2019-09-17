@@ -1,0 +1,21 @@
+<div class="text-right">
+    <button type="button" class="large-padding pointer no-background light-text" (click)="toggleForm()">{{label()}}
+        <i class="fa {{icon()}}"></i>
+    </button>
+</div>
+<!--[@openClose]="formState"-->
+<div class="lateral-padding overflow-hidden" [@openClose]="formState">
+    <input type="text" placeholder="¿Que haras?" [(ngModel)]="todo.content" class="form-control" required min="3">
+    <textarea placeholder="Información adicional" [(ngModel)]="todo.description" class="form-control"></textarea>
+
+    <div class="date-time-picker">
+        <input type="text" placeholder="Fecha" [owlDateTime]="dt" [owlDateTimeTrigger]="dt" class="form-control" [(ngModel)]="todo.deadline">
+        <owl-date-time #dt></owl-date-time>
+    </div>
+
+    <div class="top space">
+        <button type="button" class="btn green" (click)="save()">
+            <i class="fa fa-save"></i>  Guardar
+        </button>
+    </div>
+</div>

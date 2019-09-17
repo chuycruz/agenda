@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sarabun', sans-serif;
+    background: #565656; /* fallback for old browsers */
+ /* background: -webkit-linear-gradient(to right, #e1eec3, #5fa199);  Chrome 10-25, Safari 5.1-6 
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);*/
+
+}
+
+  
+* {
+  font-family: 'Sarabun', sans-serif;
+  letter-spacing: 1px
+}
+
+a {
+  text-decoration: none
+}

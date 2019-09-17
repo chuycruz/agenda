@@ -1,0 +1,16 @@
+.amarillo {
+    color: #e6b54a
+}
+
+.verde {
+    color: #5fa199
+}
+
+.cafe {
+    color: #211914
+}
+
+.card.with-badge .badge span {
+    background-color: #f25d14;
+    color: #f0f0f1
+}
